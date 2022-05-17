@@ -1,4 +1,3 @@
-from operator import index
 from django.urls import path
 
 from . import views
@@ -7,5 +6,6 @@ from . import views
 # Also tells which view functions are to be executed when requests reach those URLs
 
 urlpatterns = [
-    path('meetups/', views.index)
+    path('meetups/', views.index),
+    path('meetups/<slug:meetup_slug>', views.meetup_details),
 ]
