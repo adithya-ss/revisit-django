@@ -7,9 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Meetups</title>
     <link rel="stylesheet" href="{% static 'meetups/styles/base.css' %}">
+    <link rel="stylesheet" href="{% static 'meetups/styles/all-meetups.css' %}">
 </head>
 <body>
-    <h3>All Meetups</h3>
-    <p>Hello World! These are all the meetups.</p> 
+    <!-- <h3>All Meetups</h3>
+    <p>Hello World! These are all the meetups.</p> -->
+    <!-- Interpolation syntax: Output content stored inside a variable. Variables are those which were injected
+    into the template from the third argument of render() inside views. The key of the dictionary has to be used -->
+
+    <!-- Conditional checks -->
+    <!-- {% if show_meetups %}
+        {% for data in meetups %}
+            <p>{{ data.title }}</p>
+        {% endfor %} -->
+    <!-- conditional execution -->
+    <!-- {% else %}
+        <p>No meetups found!</p>
+    {% endif %} -->
+
+    <!-- Django template to get the first value of a dictionary [ variable.index.key equivalent to variable[index][key] ] -->
+    <!-- <h4>{{ meetups.0.title }}</h4> -->
+    
+    <header id="main-header">
+        <nav>
+            <a href="/meetups" id="main-logo">Meets</a>
+            <h2>Below are meetups which are coming up shortly!</h2>
+            <p>Find the one which interests you the most.</p>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h3>Upcoming meetups</h3>
+            <ol>
+                {% for m_item in meetups %}
+                    <li class="meetup-item">
+                        <article>
+                            <div class="meetup-summary">
+                                <div class="meetup-image">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="meetup-details">
+                                    <h4>{{ m_item.title }} : {{ m_item.genre }}</h4>
+                                    <address>{{ m_item.location }}</address>
+                                </div>
+                            </div>
+                            <div class="meetup-actions">
+                                <a href="" class="btn">Details</a>
+                            </div>
+                        </article>
+                    </li>
+                {% endfor %}
+            </ol>
+        </section>
+    </main>
+
 </body>
 </html>
