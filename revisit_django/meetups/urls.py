@@ -6,6 +6,6 @@ from . import views
 # Also tells which view functions are to be executed when requests reach those URLs
 
 urlpatterns = [
-    path('meetups/', views.index),
-    path('meetups/<slug:meetup_slug>', views.meetup_details),
+    path('meetups/', views.index, name="all-meetups"),
+    path('meetups/<slug:meetup_slug>', views.meetup_details, name="meetup-details"),
 ]

@@ -1,0 +1,21 @@
+<li class="meetup-item">
+    <article>
+        <div class="meetup-summary">
+            <div class="meetup-image">
+                <img src="" alt="">
+            </div>
+            <div class="meetup-details">
+                <h4>{{ title }}</h4>
+                <address>{{ location }}</address>
+            </div>
+        </div>
+        <div class="meetup-actions">
+            <!-- Downside here is that the initial part of the URL is hardcoded and can change
+            during the couse of the application usage -->
+            <!-- <a href="/meetups/{{ m_item.slug }}" class="btn">Details</a> -->
+            <!-- Making use of the url utility which comes out of the box through Django, we can
+            automatically generate the absolute URL -->
+            <a href="{% url 'meetup-details' m_item.slug %}" class="btn">Details</a>
+        </div>
+    </article>
+</li>

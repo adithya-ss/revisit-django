@@ -39,3 +39,4 @@ Static content:
 Django Templating:
     - {% static 'meetups/styles/base.css' %} - Specify the static resource to be loaded on the page.
     - {% load static %} - Command to load the static file.
+    - Interpolation syntax can be used anywhere within the html code. Tags and also other places. No restrictions.
