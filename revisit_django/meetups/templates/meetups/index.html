@@ -21,7 +21,7 @@ Below are meetups which are coming up shortly!
         <h3>Upcoming meetups</h3>
         <ol>
             {% for m_item in meetups %}
-                {% include 'meetups/includes/meetup-item.html' with title=m_item.title location=m_item.location %}
+                {% include 'meetups/includes/meetup-item.html' with title=m_item.title location='Bangalore' slug=m_item.slug %}
             {% endfor %}
         </ol>
     </section>

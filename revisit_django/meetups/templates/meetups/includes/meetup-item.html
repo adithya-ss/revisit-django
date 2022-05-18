@@ -15,7 +15,7 @@
             <!-- <a href="/meetups/{{ m_item.slug }}" class="btn">Details</a> -->
             <!-- Making use of the url utility which comes out of the box through Django, we can
             automatically generate the absolute URL -->
-            <a href="{% url 'meetup-details' m_item.slug %}" class="btn">Details</a>
+            <a href="{% url 'meetup-details' slug %}" class="btn">Details</a>
         </div>
     </article>
 </li>
