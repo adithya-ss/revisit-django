@@ -26,6 +26,10 @@ Start the django server:
     - python manage.py migrate **If the execution is stuck at "Watching for file changes with StatReloader"
     - python manage.py runserver
 
+Model Migrations:
+    - python manage.py makemigratons
+    - python manage.py migrate
+
 <!-- PROJECT NOTES -->
 
 Templates: 
@@ -48,3 +52,8 @@ Django Models:
 Administration
     - While trying to create a super user using 'python manage.py createsuperuser' on a windows machine, we have to prefix
     the command by winpty. This is to avoid "Superuser creation skipped due to not running in a TTY" error.
+
+Media/Images:
+    - A new package called "Pillow" has to be installed, which will be used by django under the hood, to work with images.
+    - The images need not only be uploaded, it also has to be served. Images are served through the projects's urls.py
+    - The images are static resources/files.
